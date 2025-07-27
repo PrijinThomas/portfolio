@@ -1,0 +1,529 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+body {
+  margin: 0;
+  font-family: 'Monoton', sans-serif;
+  background-color: #F8F8F8;
+  color: #222222;
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+.custom-navbar {
+  background-color: #FFFFFF;
+  padding: 1rem; /* FIXED: added unit */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.custom-navbar .nav-link {
+  color: #222222 !important;
+  font-weight: 500;
+  margin: 0 0.3rem;
+  padding: 0.2rem 0.4rem;
+}
+
+.custom-navbar .nav-link:hover {
+  color: #7B7B7B !important;
+}
+
+/* pipe seperator in navbar*/
+
+.pipe-separator .nav-item {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.pipe-separator .nav-item:not(:last-child)::after {
+  content: "|";
+  color: #7B7B7B;
+  margin: 0 0.3rem;
+  font-weight: 400;
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  background-color: #F8F8F8;
+  padding: 0 1rem;
+}
+
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 5rem;
+  font-weight: 700;
+  color: #222222;
+}
+
+  .hero-subtitle {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #7B7B7B;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #7B7B7B; /* blinking cursor effect */
+  width: fit-content;
+}
+
+
+.hero-buttons .btn-dark {
+  background-color: #222222;
+  border-color: #222222;
+}
+
+.hero-buttons .btn-outline-dark {
+  border-color: #222222;
+  color: #222222;
+}
+
+.hero-buttons .btn-outline-dark:hover {
+  background-color: #222222;
+  color: #ffffff;
+}
+
+
+
+/* Dark Mode Styles */
+.dark-mode {
+  background-color: #222222;
+  color: #F8F8F8;
+}
+
+/* Navbar in dark mode */
+.dark-mode .custom-navbar {
+  background-color: #7B7B7B;
+}
+
+.dark-mode .nav-link {
+  color: #F8F8F8 !important;
+}
+
+.dark-mode .nav-link:hover {
+  color: #FFFFFF !important;
+}
+
+/* Hero section in dark mode */
+.dark-mode .hero {
+  background-color: #222222;
+}
+
+.dark-mode .hero-title {
+  color: #F8F8F8;
+}
+
+.dark-mode .hero-subtitle {
+  color: #FFFFFF;
+}
+
+.dark-mode .btn-outline-dark {
+  border-color: #F8F8F8;
+  color: #F8F8F8;
+}
+
+.dark-mode .btn-outline-dark:hover {
+  background-color: #F8F8F8;
+  color: #222222;
+}
+
+.dark-mode .btn-dark {
+  background-color: #F8F8F8;
+  color: #222222;
+  border-color: #F8F8F8;
+}
+
+.dark-mode .btn-dark:hover {
+  background-color: #FFFFFF;
+}
+
+/* about section */
+/* Main Section: Match site background */
+#about {
+  background-color: #F8F8F8;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+}
+
+/* Inner rounded container */
+.about-inner {
+  background-color: #7B7B7B;
+  border-radius: 20px;
+  padding: 3rem;
+  width: 95%;
+  max-width: 1300px;
+  min-height: 80vh;
+  
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Responsive layout for larger screens */
+@media (min-width: 768px) {
+  .about-inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+/* Image styling */
+.about-img-wrapper {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid #FFFFFF;
+  flex-shrink: 0;
+
+  /* Center the image horizontally on small screens */
+  margin: 0 auto 1rem auto;
+}
+
+@media (min-width: 768px) {
+  .about-img-wrapper {
+    margin: 0 1rem 0 1.5rem; /* Push slightly right on large screens */
+  }
+}
+
+
+.about-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Text styling */
+.about-content {
+  flex: 1;
+  color: #F8F8F8;
+}
+
+.about-content h2 {
+  font-family: 'Playfair Display', serif;
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+}
+
+.about-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+/* 🌙 Dark Mode */
+body.dark-mode #about {
+  background-color: #222222;
+}
+
+body.dark-mode .about-inner {
+  background-color: #FFFFFF;
+}
+
+body.dark-mode .about-content,
+body.dark-mode .about-content h2,
+body.dark-mode .about-content p {
+  color: #222222;
+}
+
+body.dark-mode .about-img-wrapper {
+  border-color: #222222;
+}
+
+/* button in about */
+/* Base Custom Button Style */
+.custom-btn {
+  padding: 0.3rem 1rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  border: 2px solid transparent;
+  background-color: transparent;
+  color: inherit;
+}
+
+/* Light Mode - About Button */
+.custom-btn.btn-aboutbtn {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  text-decoration: none;
+}
+
+/* Light Mode Hover */
+.custom-btn.btn-aboutbtn:hover {
+  background-color: #fff;
+  color: #222222;
+}
+
+/* 🌙 Dark Mode */
+body.dark-mode .custom-btn.btn-aboutbtn {
+  background-color: transparent;
+  color: #222;
+  border: 2px solid #222;
+}
+
+body.dark-mode .custom-btn.btn-aboutbtn:hover {
+  background-color: #222;
+  color: #fff;
+}
+
+/* project */
+
+.project-card {
+  overflow: hidden;
+  background-color: #7B7B7B;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  color: black; /* Light mode text */
+  position: relative;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Overlay Styles - LIGHT MODE */
+.project-card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(123, 123, 123, 0.7); /* faded gray overlay */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover .overlay {
+  opacity: 1;
+}
+
+/* Circle Button Link with Arrow */
+.project-card .overlay .btn {
+  background-color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #222222;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.project-card .overlay .btn:hover {
+  background-color: #222222;
+  color: white;
+}
+
+/* Dark Mode */
+body.dark-mode .project-card {
+  background-color: white;
+  color:#000 ;
+}
+
+body.dark-mode .project-card .overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+body.dark-mode .project-card .overlay .btn {
+  background-color: white;
+  color: black;
+}
+
+body.dark-mode .project-card .overlay .btn:hover {
+  background-color: #7B7B7B;
+  color: white;
+}
+
+
+/* skill */
+
+.skill-card {
+  width: 100%;
+  max-width: 90px; /* Smaller width */
+   height: 90px;
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  background-color: #fff;
+  padding: 8px;
+  
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+}
+
+.skill-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: #F8F8F8;
+  padding: 5px;
+}
+
+
+/* Dark Mode */
+body.dark-mode .skill-card {
+  background-color: #222222;
+}
+
+body.dark-mode .skill-card img{
+
+  background-color: #222222;
+}
+
+/* certificate section */
+
+.certificate-card {
+  perspective: 1000px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 275px;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  border-radius: 10px;
+}
+
+.certificate-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden; /* for Safari */
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-front {
+  background-color: #FFFFFF;
+  z-index: 2;
+    border: 2px solid #000; /* thin black border */
+  padding: 1rem;
+  border-radius: 10px;
+
+  color: #000;
+}
+
+
+.card-back {
+  background-color: #7B7B7B;
+  color: #fff;
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+.card-front img {
+  border-radius: 12px; /* or any px/rem value you like */
+}
+
+
+/* Dark Mode */
+body.dark-mode .card-inner {
+  background-color: #222222;
+}
+
+body.dark-mode .card-front {
+  background-color: #000;
+  color: #fff;
+}
+
+body.dark-mode .card-back {
+  background-color: #000;
+  color: #f8f8f8;
+}
+
+.certificate-card .card-back .view-btn {
+  margin-top: 1rem;
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #0e3588;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.certificate-card .card-back .view-btn:hover {
+  background-color: #09245c;
+}
+
+/* Dark mode */
+body.dark-mode .certificate-card .card-front {
+  background-color: #222222;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+body.dark-mode .certificate-card .card-back .view-btn {
+  background-color: #fff;
+  color: #222222;
+}
+
+body.dark-mode .certificate-card .card-back .view-btn:hover {
+  background-color: #7B7B7B;
+  color: #fff;
+}
+/*  contact */
+
+.custom-input {
+  background-color: #7B7B7B;
+  color: #222; /* White text */
+  border: 2px solid #222222;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.custom-input::placeholder {
+  color: #aaa; /* Lighter placeholder for dark background */
+}
+
+.custom-btn {
+  background-color: #0e3588;
+  color: #fff;
+  padding: 0.6rem 2rem;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.custom-btn:hover {
+  background-color: #09245c;
+}
+
+/* Dark mode styling */
+
+
+

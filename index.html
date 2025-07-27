@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Name | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    
+  <script src="script.js"></script>
+
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top custom-navbar">
+  <div class="container-fluid px-4">
+    <a class="navbar-brand fw-bold" href="#">prijin thomas</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto d-flex align-items-center pipe-separator">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item d-flex align-items-center">
+          <div class="form-check form-switch m-0">
+            <input class="form-check-input" type="checkbox" role="switch" id="themeToggleSwitch" />
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Hero Section -->
+  <section id="home" class="hero d-flex align-items-center justify-content-center text-center">
+    <div class="container">
+      <h1 class="hero-title">PRIJIN THOMAS</h1>
+      <p class="hero-subtitle mx-auto text-center" id="typed-text"></p>
+      <div class="hero-buttons mt-4">
+        <a href="#contact" class="btn btn-dark me-3">Contact Me</a>
+        <a href="#contact" class="btn btn-outline-dark">Resume</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+<section id="about">
+  <div class="about-inner container d-flex flex-column flex-md-row align-items-center justify-content-center">
+    
+    <!-- Image -->
+    <div class="about-img-wrapper mb-4 mb-md-0">
+      <img src="assets/images/myimage.jpg" alt="Your Photo" class="about-img">
+    </div>
+
+    <!-- Text -->
+    <div class="about-content text-center text-md-start">
+      <h2>About Me</h2>
+      <p>
+        I'm Prijin Thomas, a web developer who blends design and code to build user-focused websites... 
+      </p>
+      <p>
+        Passionate about full-stack development, always exploring new tech...
+      </p>
+<div class="mt-4 d-flex justify-content-center justify-content-md-start gap-3">
+  <a href="#skills" class="custom-btn btn-aboutbtn">My Skills</a>
+  <a href="#certificates" class="custom-btn btn-aboutbtn">Certificate</a>
+</div>
+
+
+    </div>
+    
+  </div>
+</section>
+
+<!-- Project section -->
+
+<section id="projects" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">Latest Works</h2>
+    <div class="row g-4 justify-content-center">
+
+      <!-- Project Card -->
+      <div class="col-md-4">
+        <div class="project-card position-relative">
+          <img src="assets/images/myimage.jpg" class="img-fluid rounded" alt="Project 1">
+          <div class="overlay d-flex justify-content-center align-items-center">
+            <a href="https://yourprojectlink.com" target="_blank" class="btn"><i class="fas fa-arrow-up-right-from-square"></i></a>
+          </div>
+          <p class="mt-2 text-center">Halo Digital Agency Website</p>
+        </div>
+      </div>
+
+       <!-- Project Card -->
+      <div class="col-md-4">
+        <div class="project-card position-relative">
+          <img src="assets/images/myimage.jpg" class="img-fluid rounded" alt="Project 1">
+          <div class="overlay d-flex justify-content-center align-items-center">
+            <a href="https://yourprojectlink.com" target="_blank" class="btn"><i class="fas fa-arrow-up-right-from-square"></i></a>
+          </div>
+          <p class="mt-2 text-center">Halo Digital Agency Website</p>
+        </div>
+      </div>
+
+       <!-- Project Card -->
+      <div class="col-md-4">
+        <div class="project-card position-relative">
+          <img src="assets/images/myimage.jpg" class="img-fluid rounded" alt="Project 1">
+          <div class="overlay d-flex justify-content-center align-items-center">
+            <a href="https://yourprojectlink.com" target="_blank" class="btn"><i class="fas fa-arrow-up-right-from-square"></i></a>
+          </div>
+          <p class="mt-2 text-center">Halo Digital Agency Website</p>
+        </div>
+      </div>
+
+
+      <!-- Repeat for more projects -->
+
+    </div>
+  </div>
+</section>
+
+<!-- skill section -->
+<section id="skills" class="py-5">
+  <div class="container text-center">
+    
+    <!-- Skillset Heading -->
+    <h2 class="mb-4">Professional <span style="color: #7b7b7b;">Skillset</span></h2>
+    <div class="row justify-content-center gx-1 gy-4">
+      <!-- Skill Cards -->
+      <div class="col-4 col-sm-3 col-md-1">
+        <div class="skill-card" title="HTML">
+          <img src="assets/images/html-5-svgrepo-com.svg" alt="HTML" class="img-fluid">
+        </div>
+      </div>
+      <div class="col-4 col-sm-3 col-md-1">
+        <div class="skill-card" title="Bootstrap">
+          <img src="assets/images/bootstrap-svgrepo-com.svg" alt="Bootstrap" class="img-fluid">
+        </div>
+      </div>
+
+      <div class="col-4 col-sm-3 col-md-1">
+        <div class="skill-card" title="JavaScript">
+          <img src="assets/images/javascript-svgrepo-com.svg" alt="JavaScript" class="img-fluid">
+        </div>
+      </div>
+
+      <div class="col-4 col-sm-3 col-md-1">
+        <div class="skill-card" title="CSS">
+          <img src="assets/images/css-3-svgrepo-com.svg" alt="PHP" class="img-fluid">
+        </div>
+      </div>
+
+      <div class="col-4 col-sm-3 col-md-1">
+        <div class="skill-card" title="PHP">
+          <img src="assets/images/php-svgrepo-com.svg" alt="Python" class="img-fluid">
+        </div>
+      </div>
+
+        <div class="col-4 col-sm-3 col-md-1">
+        <div class="skill-card" title="Python">
+          <img src="assets/images/python-svgrepo-com.svg" alt="JavaScript" class="img-fluid">
+        </div>
+      </div>
+
+      <div class="col-4 col-sm-3 col-md-1">
+        <div class="skill-card" title="PHP">
+          <img src="assets/images/django-svgrepo-com.svg" alt="PHP" class="img-fluid">
+        </div>
+      </div>
+
+      <div class="col-4 col-sm-3 col-md-1">
+        <div class="skill-card" title="React">
+          <img src="assets/images/react-svgrepo-com.svg" alt="Python" class="img-fluid">
+        </div>
+      </div>
+
+        <div class="col-4 col-sm-3 col-md-1">
+        <div class="skill-card" title="Node">
+          <img src="assets/images/node-js-svgrepo-com.svg" alt="JavaScript" class="img-fluid">
+        </div>
+      </div>
+
+      <div class="col-4 col-sm-3 col-md-1">
+        <div class="skill-card" title="Express">
+          <img src="assets/images/express-svgrepo-com.svg" alt="PHP" class="img-fluid">
+        </div>
+      </div>
+
+      <div class="col-4 col-sm-3 col-md-1">
+        <div class="skill-card" title="Mysql">
+          <img src="assets/images/mysql-svgrepo-com.svg" alt="Python" class="img-fluid">
+        </div>
+      </div>
+
+      <div class="col-4 col-sm-3 col-md-1">
+        <div class="skill-card" title="MongoDB">
+          <img src="assets/images/mongodb-svgrepo-com.svg" alt="Python" class="img-fluid">
+        </div>
+      </div>
+
+      
+
+      <!-- Add more skill cards here -->
+    </div>
+
+    <!-- Tools Heading -->
+    <h2 class="mb-4 mt-5">Tools <span style="color: #7b7b7b;">I Use</span></h2>
+    <div class="row justify-content-center gx-1 gy-4">
+      <!-- Tool Cards -->
+      <div class="col-4 col-sm-3 col-md-1">
+        <div class="skill-card" title="VS Code">
+          <img src="assets/images/vs-code-svgrepo-com.svg" alt="VS Code" class="img-fluid">
+        </div>
+      </div>
+      <div class="col-4 col-sm-3 col-md-1">
+        <div class="skill-card" title="Git">
+          <img src="assets/images/github-142-svgrepo-com.svg" alt="Git" class="img-fluid">
+        </div>
+      </div>
+
+      <div class="col-4 col-sm-3 col-md-1">
+        <div class="skill-card " title="Powepoint">
+          <img src="assets/images/powerpoint-svgrepo-com.svg" alt="CSS" class="img-fluid">
+        </div>
+      </div>
+
+  <div class="col-4 col-sm-3 col-md-1">
+        <div class="skill-card" title="word">
+          <img src="assets/images/word-svgrepo-com.svg" alt="JavaScript" class="img-fluid">
+        </div>
+      </div>
+
+      <div class="col-4 col-sm-3 col-md-1">
+        <div class="skill-card" title="Canva">
+          <img src="assets/images/canva-svgrepo-com.svg" alt="PHP" class="img-fluid">
+        </div>
+      </div>
+
+      <div class="col-4 col-sm-3 col-md-1">
+        <div class="skill-card" title="Python">
+          <img src="assets/images/python-svgrepo-com.svg" alt="Python" class="img-fluid">
+        </div>
+      </div>
+
+      <!-- Add more tool cards here -->
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<!-- certificate section -->
+
+<section id="certificates" class="py-5">
+  <div class="container text-center">
+    <h2 class="mb-4">My <span style="color: #0e3588;">Certificates</span></h2>
+    <div class="row g-4">
+
+      <!-- Certificate Card -->
+      <div class="col-6 col-md-4">
+        <div class="certificate-card">
+          <div class="card-inner">
+            <!-- Front -->
+            <div class="card-front d-flex flex-column align-items-center justify-content-center">
+              <img src="assets/images/django-certificate2.png" alt="Certificate 1" class="img-fluid mb-2">
+              <h5 class="mb-0">Django Essiential Traning</h5>
+            </div>
+            <!-- Back -->
+            <div class="card-back d-flex align-items-center justify-content-center">
+              <p class="m-3">Completed a 12-week intensive program covering HTML, CSS, JavaScript, and backend basics.</p>
+                 <a href="https://link-to-certificate.com" target="_blank" class="view-btn">View Certificate</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Repeat for more cards -->
+      <div class="col-6 col-md-4">
+        <div class="certificate-card">
+          <div class="card-inner">
+            <!-- Front -->
+            <div class="card-front d-flex flex-column align-items-center justify-content-center">
+              <img src="assets/images/cal new.png" alt="Certificate 1" class="img-fluid mb-2">
+              <h5 class="mb-0">Web Development</h5>
+            </div>
+            <!-- Back -->
+            <div class="card-back d-flex align-items-center justify-content-center">
+              <p class="m-3">Completed a 12-week intensive program covering HTML, CSS, JavaScript, and backend basics.</p>
+                <a href="https://link-to-certificate.com" target="_blank" class="view-btn">View Certificate</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4">
+        <div class="certificate-card">
+          <div class="card-inner">
+            <!-- Front -->
+            <div class="card-front d-flex flex-column align-items-center justify-content-center">
+              <img src="assets/images/cal new.png" alt="Certificate 1" class="img-fluid mb-2">
+              <h5 class="mb-0">Web Development</h5>
+            </div>
+            <!-- Back -->
+            <div class="card-back d-flex align-items-center justify-content-center">
+              <p class="m-3">Completed a 12-week intensive program covering HTML, CSS, JavaScript, and backend basics.</p>
+                <a href="https://link-to-certificate.com" target="_blank" class="view-btn">View Certificate</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- contact -->
+
+<!-- Contact Section -->
+<section id="contact" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Contact Me</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <form id="contactForm" class="p-4 rounded shadow" style="background-color: #7b7b7b;">
+          <div class="mb-3">
+            <label for="name" class="form-label">Your Name</label>
+            <input type="text" class="custom-input w-100" id="name" name="name" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label">Your Email</label>
+            <input type="email" class="custom-input w-100" id="email" name="email" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="message" class="form-label">Your Message</label>
+            <textarea class="custom-input w-100" id="message" name="message" rows="5" required></textarea>
+          </div>
+
+          <div class="text-center">
+            <button type="submit" class="btn btn-dark px-4 py-2">Send Message</button>
+          </div>
+
+          <!-- Alert -->
+          <div id="alertSuccess" class="alert alert-success mt-3 text-center d-none" role="alert">
+            Message sent successfully!
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
