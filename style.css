@@ -572,6 +572,37 @@ body.dark-mode .skill-card img{
   display: block;
 }
 
+/* Adjust back content layout for smaller devices */
+.card-back {
+  padding: 1rem;
+  text-align: center;
+}
+
+.card-back p {
+  font-size: 1rem;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .card-inner {
+    height: auto; /* let it expand naturally */
+    min-height: 220px; /* still keep a minimum height */
+  }
+
+  .card-back {
+    padding: 0.8rem;
+  }
+
+  .card-back p {
+    font-size: 0.85rem; /* smaller text */
+    margin-bottom: 0.5rem;
+  }
+
+  .certificate-card .card-back .view-btn {
+    padding: 0.4rem 1rem;
+    font-size: 0.85rem;
+  }
+}
 
 
 /* Dark Mode */
@@ -603,6 +634,8 @@ body.dark-mode .card-back {
 .certificate-card .card-back .view-btn:hover {
   background-color: #09245c;
 }
+
+
 @media (max-width: 768px) {
   .card-inner {
     height: 220px; /* smaller height for tablets & mobile */
