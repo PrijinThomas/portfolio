@@ -59,12 +59,65 @@ body {
   margin: 0 0.3rem;
   font-weight: 400;
 }
+/* Pipe separator in dark mode */
+.dark-mode .pipe-separator .nav-item:not(:last-child)::after {
+  color: #F8F8F8;
+}
+
+.theme-toggle-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+  color: #222222;
+  transition: color 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+  color: #7B7B7B;
+}
+
+/* Dark mode icon color */
+.dark-mode .theme-toggle-btn {
+  color: #F8F8F8;
+}
+
+.dark-mode .theme-toggle-btn:hover {
+  color: #FFFFFF;
+}
+
+.navbar-brand {
+  font-family: 'Dancing Script', cursive; /* Sign-like cursive font */
+  font-size: 1.8rem;
+  color: #222222;
+  
+}
+
+.dark-mode .navbar-brand {
+  color: #F8F8F8;
+  text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.3);
+}
+
+
+/* Navbar in dark mode */
+.dark-mode .custom-navbar {
+  background-color: #7B7B7B;
+}
+
+.dark-mode .nav-link {
+  color: #F8F8F8 !important;
+}
+
+.dark-mode .nav-link:hover {
+  color: #FFFFFF !important;
+}
 
 /* Hero */
 .hero {
   height: 100vh;
   background-color: #F8F8F8;
   padding: 0 1rem;
+  overflow-x: hidden;
 }
 
 .hero-title {
@@ -74,16 +127,30 @@ body {
   color: #222222;
 }
 
-  .hero-subtitle {
+.hero-subtitle {
   font-size: 1.25rem;
   font-weight: 400;
   color: #7B7B7B;
-  white-space: nowrap;
+  white-space: normal; /* Allow wrapping on small screens */
   overflow: hidden;
-  border-right: 2px solid #7B7B7B; /* blinking cursor effect */
+  border-right: 2px solid #7B7B7B;
   width: fit-content;
 }
 
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 2.5rem; /* Scale down title */
+  }
+  .hero-subtitle {
+    font-size: 1rem; /* Smaller subtitle */
+    text-align: center; /* Center align for mobile */
+    white-space: normal; /* Break lines on small screens */
+  }
+  .hero-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
 
 .hero-buttons .btn-dark {
   background-color: #222222;
@@ -92,6 +159,7 @@ body {
 
 .hero-buttons .btn-outline-dark {
   border-color: #222222;
+
   color: #222222;
 }
 
@@ -108,18 +176,6 @@ body {
   color: #F8F8F8;
 }
 
-/* Navbar in dark mode */
-.dark-mode .custom-navbar {
-  background-color: #7B7B7B;
-}
-
-.dark-mode .nav-link {
-  color: #F8F8F8 !important;
-}
-
-.dark-mode .nav-link:hover {
-  color: #FFFFFF !important;
-}
 
 /* Hero section in dark mode */
 .dark-mode .hero {
@@ -152,6 +208,8 @@ body {
 
 .dark-mode .btn-dark:hover {
   background-color: #FFFFFF;
+    color: #222222; /* make text visible */
+  
 }
 
 /* about section */
@@ -207,6 +265,19 @@ body {
   }
 }
 
+@media (max-width: 576px) {
+
+
+  #about {
+    min-height: auto;     /* Remove forced 100vh */
+    padding: 2rem 1rem;
+  }
+
+  .about-inner {
+    min-height: auto;     /* Remove 80vh restriction */
+    padding: 2rem;
+  }
+}
 
 .about-img {
   width: 100%;
@@ -320,10 +391,17 @@ body.dark-mode .custom-btn.btn-aboutbtn:hover {
   background-color: rgba(123, 123, 123, 0.7); /* faded gray overlay */
   opacity: 0;
   transition: opacity 0.3s ease;
+    padding: 20px;
+  color: white;
 }
 
 .project-card:hover .overlay {
   opacity: 1;
+}
+.project-card .project-desc {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  max-width: 90%;
 }
 
 /* Circle Button Link with Arrow */
@@ -424,7 +502,7 @@ body.dark-mode .project-card .overlay .btn:hover {
 
 /* Dark Mode */
 body.dark-mode .skill-card {
-  background-color: #222222;
+  background-color: #302d2d;
 }
 
 body.dark-mode .skill-card img{
@@ -525,6 +603,14 @@ body.dark-mode .card-back {
 .certificate-card .card-back .view-btn:hover {
   background-color: #09245c;
 }
+@media (max-width: 768px) {
+  .card-inner {
+    height: 220px; /* smaller height for tablets & mobile */
+  }
+}
+
+
+
 
 /* Dark mode */
 body.dark-mode .certificate-card .card-front {
@@ -544,34 +630,87 @@ body.dark-mode .certificate-card .card-back .view-btn:hover {
 }
 /*  contact */
 
-.custom-input {
-  background-color: #7B7B7B;
-  color: #222; /* White text */
-  border: 2px solid #222222;
-  padding: 0.75rem 1rem;
-  font-size: 1rem;
-  border-radius: 8px;
-  transition: all 0.3s ease;
+
+/* Light Mode */
+#contact {
+  background-color: #fff;
+  color: #000;
+  padding: 60px 0;
+  width: 100%;
 }
 
-.custom-input::placeholder {
-  color: #aaa; /* Lighter placeholder for dark background */
+#contact a {
+  text-decoration: none;
+  color: #000;
 }
 
-.custom-btn {
-  background-color: #0e3588;
-  color: #fff;
-  padding: 0.6rem 2rem;
-  border: none;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
+#contact a:hover {
+  color: #000;
 }
 
-.custom-btn:hover {
-  background-color: #09245c;
+#contact i {
+  font-size: 2rem;
+  color: #000;
 }
 
-/* Dark mode styling */
+#contact p {
+  color: #000; /* black text */
+}
 
+
+/* Apply only on desktop screens (≥992px for Bootstrap's lg breakpoint) */
+@media (min-width: 992px) {
+  #contact {
+    padding-top: 100px;  /* increase top padding */
+    padding-bottom: 100px; /* increase bottom padding */
+    min-height: 500px; /* optional fixed minimum height */
+  }
+}
+
+/* Dark Mode */
+body.dark-mode #contact {
+  background-color: #222222;
+  color: #F8F8F8;
+}
+
+body.dark-mode #contact h2 {
+  color: #fff !important;
+}
+
+body.dark-mode #contact a {
+  color: #F8F8F8;
+}
+
+body.dark-mode #contact a:hover {
+  color: #F8F8F8;
+}
+
+body.dark-mode #contact i {
+  color: #F8F8F8;
+}
+
+body.dark-mode #contact p {
+  color: #f8f8f8; /* light text */
+}
+
+
+
+/* Footer full-width background */
+#footer {
+  background-color: #000;
+  color: white;
+  padding: 20px 0;
+  width: 100%;
+}
+
+#footer a {
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+#footer a:hover {
+  color: #ccc;
+}
 
 

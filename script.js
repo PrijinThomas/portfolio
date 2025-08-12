@@ -1,11 +1,21 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const toggleSwitch = document.getElementById("themeToggleSwitch");
+document.addEventListener('DOMContentLoaded', () => {
   const body = document.body;
+  const toggleBtn = document.getElementById('themeToggleBtn');
+  const icon = toggleBtn.querySelector('i');
 
-  toggleSwitch.addEventListener("change", () => {
-    body.classList.toggle("dark-mode", toggleSwitch.checked);
+  toggleBtn.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+
+    if (body.classList.contains('dark-mode')) {
+      icon.classList.remove('fa-moon');
+      icon.classList.add('fa-sun');
+    } else {
+      icon.classList.remove('fa-sun');
+      icon.classList.add('fa-moon');
+    }
   });
 });
+
 
   const text = "Web Developer | Python | Full Stack Developer";
   const speed = 60; // typing speed in ms
@@ -32,34 +42,3 @@ document.addEventListener("DOMContentLoaded", function () {
     new bootstrap.Tooltip(tooltipTriggerEl);
   });
 });
-
-document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("contactForm");
-  const alertBox = document.getElementById("alertSuccess");
-
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    const formData = new FormData(form);
-
-    fetch("https://formsubmit.co/ajax/prijinthomas2003@gmail.com", {
-      method: "POST",
-      headers: {
-        'Accept': 'application/json'
-      },
-      body: formData
-    })
-    .then(response => response.json())
-    .then(data => {
-      if (data.success === "true") {
-        alertBox.classList.remove("d-none");
-        form.reset();
-        setTimeout(() => {
-          alertBox.classList.add("d-none");
-        }, 4000);
-      }
-    })
-    .catch(error => console.error("Error:", error));
-  });
-});
-
