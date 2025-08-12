@@ -513,6 +513,7 @@ body.dark-mode .skill-card img{
 
 /* certificate section */
 
+/* Certificate Card Base */
 .certificate-card {
   perspective: 1000px;
 }
@@ -536,7 +537,7 @@ body.dark-mode .skill-card img{
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  -webkit-backface-visibility: hidden; /* for Safari */
+  -webkit-backface-visibility: hidden;
   border-radius: 10px;
   overflow: hidden;
   padding: 1rem;
@@ -547,24 +548,24 @@ body.dark-mode .skill-card img{
 }
 
 .card-front {
-  background-color: #FFFFFF;
+  background-color: #fff;
   z-index: 2;
-    border: 2px solid #000; /* thin black border */
+  border: 2px solid #000;
   padding: 1rem;
   border-radius: 10px;
-
   color: #000;
 }
 
-
 .card-back {
-  background-color: #7B7B7B;
+  background-color: #7b7b7b;
   color: #fff;
   transform: rotateY(180deg);
   z-index: 1;
+  padding: 1rem;
+  text-align: center;
 }
 
-  .card-front img {
+.card-front img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
@@ -572,21 +573,15 @@ body.dark-mode .skill-card img{
   display: block;
 }
 
-/* Adjust back content layout for smaller devices */
-.card-back {
-  padding: 1rem;
-  text-align: center;
-}
-
 .card-back p {
   font-size: 1rem;
 }
 
-/* Mobile adjustments */
+/* Mobile adjustments — single, unified media query */
 @media (max-width: 768px) {
   .card-inner {
-    height: auto; /* let it expand naturally */
-    min-height: 220px; /* still keep a minimum height */
+    height: auto; /* allow it to expand */
+    min-height: 220px; /* still keep a minimum */
   }
 
   .card-back {
@@ -594,7 +589,7 @@ body.dark-mode .skill-card img{
   }
 
   .card-back p {
-    font-size: 0.85rem; /* smaller text */
+    font-size: 0.85rem;
     margin-bottom: 0.5rem;
   }
 
@@ -604,22 +599,7 @@ body.dark-mode .skill-card img{
   }
 }
 
-
-/* Dark Mode */
-body.dark-mode .card-inner {
-  background-color: #222222;
-}
-
-body.dark-mode .card-front {
-  background-color: #000;
-  color: #fff;
-}
-
-body.dark-mode .card-back {
-  background-color: #000;
-  color: #f8f8f8;
-}
-
+/* View Button */
 .certificate-card .card-back .view-btn {
   margin-top: 1rem;
   padding: 0.5rem 1.2rem;
@@ -635,32 +615,37 @@ body.dark-mode .card-back {
   background-color: #09245c;
 }
 
-
-@media (max-width: 768px) {
-  .card-inner {
-    height: 220px; /* smaller height for tablets & mobile */
-  }
+/* Dark Mode */
+body.dark-mode .card-inner {
+  background-color: #222;
 }
 
+body.dark-mode .card-front {
+  background-color: #000;
+  color: #fff;
+}
 
+body.dark-mode .card-back {
+  background-color: #000;
+  color: #f8f8f8;
+}
 
-
-/* Dark mode */
 body.dark-mode .certificate-card .card-front {
-  background-color: #222222;
+  background-color: #222;
   color: #fff;
   border: 1px solid #fff;
 }
 
 body.dark-mode .certificate-card .card-back .view-btn {
   background-color: #fff;
-  color: #222222;
+  color: #222;
 }
 
 body.dark-mode .certificate-card .card-back .view-btn:hover {
-  background-color: #7B7B7B;
+  background-color: #7b7b7b;
   color: #fff;
 }
+
 /*  contact */
 
 
